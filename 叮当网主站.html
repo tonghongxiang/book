@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>叮当网</title>
+    <link rel="stylesheet" href="css/图片轮播.css" type="text/css">
+    <script type="text/javascript" src="JS/首页js.js" ></script>
+    <script type="text/javascript" src="JS/jquery.js" ></script>
+</head>
+<body style="margin: 0;background: white;text-align: center">
+<div id="ajax_login" style="text-align: right"></div>
+<div id="box4"><img src="image/logo.png" style="width: 45px"><img src="image/logo1.png" style="width: 345px"></div>
+<div id="zuo_arrow">
+    <input type="image" src="image/left_arrow.png" class="input_all" id="zuo">
+</div>
+<div id="you_arrow">
+    <input type="image" src="image/right_arrow.png" class="input_all" id="you">
+</div>
+
+<div id="container">
+    <div id="div2"><!--轮播标签-->
+        <ul id="ul1">
+            <li class="li1" style="background-color: white"><a href="" ><span class="span_all"  id="span1">可爱的身体</span></a></li>
+            <li class="li1"><a href="###" ><span class="span_all" id="span2">少年读史记</span></a></li>
+            <li class="li1"><a href="###" ><span class="span_all" id="span3">诺奖少年</span></a></li>
+            <li class="li1"><a href="###" ><span class="span_all" id="span4">自然图鉴</span></a></li>
+            <li class="li1"><a href="###" ><span class="span_all" id="span5">亲亲自然</span></a></li>
+        </ul>
+    </div>
+
+    <div id="div3"></div><!--透明图层-->
+    <div id="box"><!--轮播图片-->
+        <ul id="ul2">
+            <li><a href="###"><img class="p_all" id="p1" src="image/我的体育老师.png"></a></li>
+            <li><a href="###"><img class="p_all" id="p2" src="image/极光之恋.png"></a></li>
+            <li><a href="###"><img class="p_all" id="p3" src="image/猎场.png"></a></li>
+            <li><a href="###"><img class="p_all" id="p4" src="image/青春旅社.png"></a></li>
+            <li><a href="###"><img class="p_all" id="p5" src="image/星际特工.png"></a></li>
+        </ul>
+    </div>
+</div>
+<div id="container2" class="container">
+    <div class="box1" align="center"><!--左侧导航级连菜单-->
+        <ul class="menu">
+            <li class="level1">
+                <a onclick="onc()" href="####" id="排行榜"><img src="image/ranking.png" style="width: 20px">&nbsp&nbsp排行榜&nbsp&nbsp&nbsp</a>
+            </li>
+            <li class="level1">
+                <a href="###" id="童书" class="大类">童书</a>
+                <ul class="level2">
+                    <li><a href="####" id="中国儿童文学" class="tip">中国儿童文学</a></li>
+                    <li><a href="####" id="外国儿童文学" class="tip">外国儿童文学</a></li>
+                    <li><a href="####" id="科普/百科" class="tip">科普/百科</a></li>
+                    <li><a href="####" id="少儿英语" class="tip">少儿英语</a></li>
+                    <li><a href="####" id="绘本" class="tip">绘本</a></li>
+                    <li><a href="####" id="玩具书" class="tip">玩具书</a></li>
+                </ul>
+            </li>
+
+            <li class="level1">
+                <a href="####" id="教育" class="大类">教育</a>
+                <ul class="level2">
+                    <li><a href="####" id="中小学教辅"   class="tip">中小学教辅</a></li>
+                    <li><a href="####" id="考试"        class="tip">考试</a></li>
+                    <li><a href="####" id="大中专教材"   class="tip">大中专教材</a></li>
+                    <li><a href="####" id="外语"        class="tip">外语</a></li>
+                    <li><a href="####" id="工具书" class="tip">工具书</a></li>
+                    <li><a href="####" id="教师用书" class="tip">教师用书</a></li>
+                    <li><a href="####" id="新概念" class="tip">新概念</a></li>
+                    <li><a href="####" id="英语四级" class="tip">英语四级</a></li>
+                    <li><a href="####" id="英语六级" class="tip">英语六级</a></li>
+                </ul>
+            </li>
+            <li class="level1">
+                <a href="####" id="文艺" class="大类">文艺</a>
+                <ul class="level2">
+                    <li><a href="####" id="小说"   class="tip">小说</a></li>
+                    <li><a href="####" id="文学"   class="tip">文学</a></li>
+                    <li><a href="####" id="传记"   class="tip">传记</a></li>
+                    <li><a href="####" id="动漫"   class="tip">动漫</a></li>
+                    <li><a href="####" id="摄影"   class="tip">摄影</a></li>
+                    <li><a href="####" id="偶像明星"  class="tip">偶像明星</a></li>
+                    <li><a href="####" id="涂色填色"  class="tip">涂色填色</a></li>
+                </ul>
+            </li>
+
+            <li class="level1">
+                <a href="####" id="经济管理" class="大类">经济管理</a>
+                <ul class="level2">
+                    <li><a href="####" id="经济"   class="tip">经济</a></li>
+                    <li><a href="####" id="管理"   class="tip">管理</a></li>
+                    <li><a href="####" id="投资理财"   class="tip">投资理财</a></li>
+                    <li><a href="####" id="股票"   class="tip">股票</a></li>
+                    <li><a href="####" id="金融"   class="tip">金融</a></li>
+                    <li><a href="####" id="市场/销售"   class="tip">市场/销售</a></li>
+                    <li><a href="####" id="会计"   class="tip">会计</a></li>
+                </ul>
+            </li>
+            <li class="level1">
+                <a href="####" id="励志" class="大类">励志</a>
+                <ul class="level2">
+                    <li><a href="####" id="励志/成功"   class="tip">励志/成功</a></li>
+                    <li><a href="####" id="心灵修养"   class="tip">心灵修养</a></li>
+                    <li><a href="####" id="人际交往"   class="tip">人际交往</a></li>
+                    <li><a href="####" id="口才/演讲/辩论"   class="tip">口才/演讲/辩论</a></li>
+                </ul>
+            </li>
+            <li class="level1">
+                <a href="####" id="生活" class="大类">生活</a>
+                <ul class="level2">
+                    <li><a href="####" id="育儿"   class="tip">育儿</a></li>
+                    <li><a href="####" id="亲子教育"   class="tip" >亲子教育</a></li>
+                    <li><a href="####" id="保健"   class="tip">保健</a></li>
+                    <li><a href="####" id="运动"   class="tip">运动</a></li>
+                    <li><a href="####" id="休闲"   class="tip">休闲</a></li>
+                    <li><a href="####" id="美食"   class="tip">美食</a></li>
+                    <li><a href="####" id="美妆"   class="tip">美妆</a></li>
+
+                </ul>
+            </li>
+            <li class="level1">
+                <a href="####" id="科技" class="大类">科技</a>
+                <ul class="level2">
+                    <li><a href="####" id="科普读物"   class="tip">科普读物</a></li>
+                    <li><a href="####" id="计算机/网络"   class="tip">计算机/网络</a></li>
+                    <li><a href="####" id="医学"   class="tip">医学</a></li>
+                    <li><a href="####" id="工业技术"   class="tip" >工业技术</a></li>
+                    <li><a href="####" id="建筑"   class="tip">建筑</a></li>
+                    <li><a href="####" id="自然科学"   class="tip">自然科学</a></li>
+                    <li><a href="####" id="农业/林业"   class="tip">农业/林业</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="box2"></div>
+</div>
+<div id="container3" class="container">
+    <div style=" position: relative;width: 140px;height:50px;left: 80px;text-align: left;margin: 30px 0 10px 0;" ><img  src="image/others.png" style="position:relative;top: 9px;height: 36px">&nbsp&nbsp<a style="font-size: 1.4em">最新上架</a></div>
+    <div id="put_on"></div>
+</div>
+<div id="container4">
+    <div id="ranking1"></div>
+
+    <div id="ranking2"></div>
+
+    <div id="ranking3"></div>
+
+    <div id="ranking4"></div>
+
+    <div id="ranking5"></div>
+
+    <div id="ranking6"></div>
+</div>
+<div style="position:relative;top: 500px ;height: 2px;width: 100%;background-color: red"></div>
+<div id="container5">
+
+    <div style="position: relative;top: 50px;height: 100px;width: 100%">
+        <p class="p_bottom">关于叮当&nbsp|&nbsp dingdang &nbsp|&nbsp服务条款&nbsp|&nbsp广告服务&nbsp|&nbsp客服中心&nbsp|&nbsp网站导航</p>
+        <p class="p_bottom">Copyright © 1998 - 201720172017 diangdang. All Rights Reserved.</p>
+        <p class="p_bottom">叮当公司 版权所有 叮当网络文化经营许可证</p>
+    </div>
+</div>
+<div id="box5">
+    <a href="购物车.html" onmouseover=""><img id="img_car" src="image/shopping_1.png"></a><br>
+    <img src="image/Hand_finger.png" STYLE="width: 15px"><br>
+    <a style="font-size: 0.4em;color: red">点<br>击<br>查<br>看<br>购<br>物<br>车</a>
+</div>
+<script type="text/javascript">
+    //等待dom元素加载完毕.
+    $(document).ready(function(){
+        $(".level1 > a").mouseout(function () {
+            $(this).removeClass("current");
+        });
+        $(".level1 > a").mouseover(function(){
+            $(this).addClass("current")   //给当前元素添加"current"样式
+                .next().show()                //下一个元素显示
+                .parent().siblings().children("a").removeClass("current")        //父元素的兄弟元素的子元素<a>移除"current"样式
+                .next().hide();                //它们的下一个元素隐藏
+            return false;
+        });
+    });
+
+    $('#ajax_login').load('ajaxlogin.php?a='+Math.random()); /*显示登陆或登出状态和用户名*/
+
+    $(function () {  /*动态显示点击的分类下的所有图书*/
+        $(".tip").click(function () {
+            var a=$(this).attr('id');/*获取点击事件的ID*/
+            $("#box2").load("test.php",{name: a})/*传递参数a给后台Php文件test.php，最后返回数据填入id为box2的div中*/
+        });
+        $(".大类").click(function () {
+            var b=$(this).attr('id');
+            $("#box2").load("test.php",{name1: b})
+        });
+    });
+
+    $('.container').on("click",".a_ll",function (e) {/*动态绑定刷新数据事件*/
+        var c=$(e.target).attr('id');
+        $.ajax({
+            url: "add_look_num.php",
+            type: "POST",
+            data: {name3: c}
+        });
+    });
+
+    $('.container').on("click",".a_ll",function (e) {/*动态绑定刷新数据事件*/
+        var f=$(e.target).attr('id');
+        $.ajax({
+            url: "book_descpt.php",
+            type: "POST",
+            data: {name5:f}
+        });
+    });
+
+
+    $('.container').on("click",".buy_book",function () {/*动态绑定刷新数据事件*/
+        var d=$(this).attr('id');
+        $.ajax({
+            url: "购物车.php",
+            type: "POST",
+            data: {name4: d}
+        });
+    })
+
+
+</script>
+</body>
+</html>

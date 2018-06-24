@@ -1,0 +1,83 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <script type="text/javascript" src="js/j" ></script>
+    <style type="text/css">
+        table{
+            width: 100%
+        }
+        table tr{
+
+        }
+        table tr:nth-child(odd){
+            background:#f5f5f5 ;
+        }
+        tr td{
+            border: none;
+            padding: 5px;
+        }
+        #container10{
+            width: 760px;
+            position: relative;
+            margin: 0 auto;
+        }
+        .dt{
+            text-decoration-line: none;
+        }
+        .dt:hover{
+            text-decoration-line: none;
+            color: red;
+        }
+        #submit{
+            position: relative;
+            top: 10px;
+            text-decoration-line: none;
+            font-size: 1.3em;
+            color: white;
+            border-radius: 3px;
+            background-color: red;
+            padding: 5px;
+        }
+        #submit:hover{
+            color: #f7f6f3;
+        }
+    </style>
+</head>
+<body style="margin: 0;background: white;text-align: center">
+
+<div id="container8">
+    <div id="container10"></div>
+</div>
+
+
+<a href="叮当网主站.html" id="submit"> 提交订单</a>
+<script type="text/javascript">
+
+
+    $('#container10').on("click",".dt",function (e) {/*动态绑定刷新数据事件*/
+        var c=$(e.target).attr('id');
+        alert(c);
+        $.ajax({
+            url: "buy_delete.php",
+            type: "POST",
+            data: {name3: c}
+        });
+    });
+
+    $(function () {  /*动态显示点击的分类下的所有图书*/
+        $("#submit").click(function () {
+            var a=document.getElementById("he_ji").innerHTML;
+            alert(a);
+            $.ajax({
+                url: "add_order.php",
+                type: "POST",
+                data: {td:a}
+            });
+
+        });
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<table width="200" border="0" id="table">
+    <tr>
+        <td>名称</td>
+        <td>图片</td>
+        <td>价格</td>
+        <td>操作</td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td> </td>
+        <td>10</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td> </td>
+        <td>10</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td> </td>
+        <td>10</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td> </td>
+        <td>10</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>合计</td>
+        <td> </td>
+        <td> </td>
+    </tr>
+</table>
+<script type="text/javascript">
+    var calcTotal=function(table,column){//合计，表格对象，对哪一列进行合计，第一列从0开始
+        var trs=table.getElementsByTagName('tr');
+        var start=1,//忽略第一行的表头
+            end=trs.length-1;//忽略最后合计的一行
+        var total=0;
+        for(var i=start;i<end;i++){
+            var td=trs[i].getElementsByTagName('td')[column];
+            var t=parseFloat(td.innerHTML);
+            if(t)total+=t;
+        }
+        trs[end].getElementsByTagName('td')[column].innerHTML=total;
+    };
+    calcTotal(document.getElementById('table'),2);
+</script>
+</body>
+</html>

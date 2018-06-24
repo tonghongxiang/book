@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript" src="JS/级联菜单.js"></script>
+<style type="text/css">
+    #div0{
+        width: 100%;
+        height:40px;
+        background-color:#2d2d2d;
+    }
+    a{
+        display: inline-block;
+        padding-top: 10px;
+        width: 90px;
+        height: 30px;
+        color: #f7f6f3;
+    }
+    body{
+        border: #2d2d2d solid 0;
+        margin: 0;
+    }
+    .table1{
+        width: 100% ;
+        height: 70px;
+        background-color: #2d2d2d;
+    }
+    table td{
+        width: 40px;
+        border: #2d2d2d solid 1px ;
+        margin: 20px;
+        border-radius: 4px;
+
+    }
+    a:link{text-decoration:none ; color:#f7f6f3;background-color: #2d2d2d}
+    a:hover{text-decoration:none ; color:#2d2d2d;background-color: #f7f6f3}
+</style>
+</head>
+<body bgcolor="#f1efea">
+<table class="table1">
+    <tr>
+        <td align="center" width="200px" colspan="2"><img src="image/hotel_1388px_1198909_easyicon.net副本.png" width="100px"></img></td>
+    </tr>
+</table>
+<div id="div0" align="center">
+    <a href="###"  onmouseover="top.document.getElementById('div2').style.display='block'"
+                        onmouseout="top.document.getElementById('div2').style.display='none'">管理员管理</a>
+    <a href="###"  onmouseover="top.document.getElementById('div3').style.display='block'"
+                        onmouseout="top.document.getElementById('div3').style.display='none'">图书管理</a>
+    <a href="###"  onmouseover="top.document.getElementById('div4').style.display='block'"
+                        onmouseout="top.document.getElementById('div4').style.display='none'">用户管理</a>
+    <a href="###" onmouseover="top.document.getElementById('div5').style.display='block'"
+                        onmouseout="top.document.getElementById('div5').style.display='none'">订单管理</a>
+    <a href="log.html" onmouseover="top.document.getElementById('div6').style.display='block'"
+                        onmouseout="top.document.getElementById('div6').style.display='none'">操作</a>
+</div>
+</body>
+</html>

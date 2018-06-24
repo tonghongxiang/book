@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员后台</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+        }
+        #ajax_login{
+            position: absolute;
+            left:0;
+            top:0;
+            width: 100%;
+            background-color: black;
+            z-index: 3;
+            opacity: 0.6;
+        }
+        #div2{
+            position: relative;
+            width: 90px;
+            height: auto;
+            top: -896px;
+            left: -191px;
+            display: none;
+            z-index: 2;
+
+        }
+        #div3{
+            position: relative;
+            display: none;
+            width: 90px;
+            top: -896px;
+            left: -96px;
+            height: auto;
+            z-index: 2;
+        }
+        #div4{
+            position: relative;
+            display: none;
+            width: 90px;
+            height: auto;
+            top: -896px;
+            left: 0;
+            z-index: 2;
+        }
+        #div5{
+            position: relative;
+            display: none;
+            width: 90px;
+            height: auto;
+            top: -896px;
+            left: 95px;
+            z-index: 2;
+        }
+        #div6{
+            position: relative;
+            display: none;
+            width: 90px;
+            height: auto;
+            top: -896px;
+            left: 190px;
+            z-index: 2;
+        }
+
+        a {
+            padding-top: 15px;
+            display: inline-block;
+            width: 90px;
+            height: 35px;
+            color: #f7f6f3;
+        }
+        a2 {
+            display: inline-block;
+            width: 90px;
+            height: 55px;
+            background-color: #ffffff;
+            color: #000000;
+        }
+        a:link{text-decoration:none ; color:#f7f6f3;background-color: #2d2d2d}
+        a:hover{text-decoration:none ;  color:#2d2d2d;background-color: #f7f6f3}
+        a2:link{text-decoration:none ; color:#2d2d2d;background-color:#f7f6f3 }
+        a2:hover{text-decoration:none ;  color:#f7f6f3;background-color:#2d2d2d }
+    </style>
+</head>
+<body>
+<iframe src="daohangkuangjia.html" width=100% height=1000px frameborder="0"></iframe>
+<div id="ajax_login" style="text-align: right"></div>
+
+<div align="center">
+<div id="div2"  onmouseover="showdiv('div2')" onmouseout="hiddendiv('div2')">
+    <a href="添加管理员.html" target="main">添加</a><br>
+    <a href="删除管理员.html" target="main">删除</a><br>
+</div>
+<div id="div3" onmouseover="showdiv('div3')" onmouseout="hiddendiv('div3')">
+    <a href="后台_添加图书.html" target="main">添加图书</a><br>
+    <a href="后台_图书删除.php" target="main">删除图书</a><br>
+</div>
+<div id="div4" onmouseover="showdiv('div4')" onmouseout="hiddendiv('div4')">
+    <a href="查看用户.php" target="main">查看</a><br>
+    <a href="后台_用户信息修改.html" target="main">修改</a><br>
+    <a href="后台_用户删除.php" target="main">删除用户</a><br>
+</div>
+    <div id="div5" onmouseover="showdiv('div5')" onmouseout="hiddendiv('div5')">
+    <a href="查看订单.php" target="main">查看订单</a><br>
+    <a href="后台_订单删除.php" target="main">删除订单</a><br>
+</div>
+<div id="div6" onmouseover="showdiv('div6')" onmouseout="hiddendiv('div6')">
+    <a href="syslogout.php">注销</a><br>
+</div>
+
+</div>
+<script type="text/javascript" src="JS/级联菜单.js"></script>
+</body>
+</html>

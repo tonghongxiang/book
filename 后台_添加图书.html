@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加图书</title>
+    <script language="JavaScript">
+        function changeProvince() {
+            with(document.myForm){
+                var selectS=document.querySelectorAll(".select");
+                var countrys=new Array();
+                countrys["0"]=["--请选择大类--"];
+                countrys["童书"]=["绘本","中国儿童文学","外国儿童文学","科普/百科","少儿英语","玩具书"];
+                countrys["教育"]=["中小学教辅","考试","大中专教材","外语","工具书","教师用书","新概念","英语四级","英语六级"];
+                countrys["文艺"]=["小说","文学","传记","动漫","摄影","偶像明星","涂色填色"];
+                countrys["经济管理"]=["经济","管理","投资理财","股票","金融","市场/销售","会计"];
+                countrys["励志"]=["励志/成功","心灵修养","人际交往","口才/演讲/辩论"];
+                countrys["生活"]=["育儿","亲子教育","保健","运动","休闲","美食","美妆"];
+                countrys["科技"]=["科普读物","计算机/网络","医学","工业技术","建筑","自然科学","农业/林业"];
+
+
+                var value=selectS[0].value;
+                selectS[1].options.length=0;
+                var option;
+                for (i=0;i<countrys[value].length;i++){
+                    option=new Option(countrys[value][i],countrys[value][i]);
+                    selectS[1].options.add(option);
+                    selectS[1].options.selected=countrys[value][0];
+            }
+                if (selectS[0].value=="0")
+                    selectS[1].disabled=true;
+                else
+                    selectS[1].disabled=false;
+            }
+        }
+    </script>
+    <style type="text/css">
+        #container1{
+            position: relative;
+            width: 300px;
+            height: 400px;
+            border: solid 1px red;
+        }
+        #container2{
+            width: 300px;
+            height: 400px;
+            border: solid 1px red;
+        }
+        input{
+            height: 25px;
+            border-radius: 3px;
+            border: solid 1px #C4D5DF;
+            margin: 5px 5px 5px 5px;
+        }
+    </style>
+</head>
+<body style="text-align: center">
+<p>添加图书</p><br>
+<form method="post" action="后台_添加图书.php" name="myForm" enctype="multipart/form-data">
+    <div id="contaiber1">
+        <select name="dalei" onchange="changeProvince()" class="select">
+            <option value="0">--请选择大类--</option>
+            <option value="童书">童书</option>
+            <option value="教育">教育</option>
+            <option value="文艺">文艺</option>
+            <option value="经济管理">经济管理</option>
+            <option value="励志">励志</option>
+            <option value="生活">生活</option>
+            <option value="科技">科技</option>
+        </select>
+        <select name="xiaolei" class="select">
+            <option>--请选择小类--</option>
+        </select><br>
+        <input  type="date" id="chubanriqi" name="chubanriqi" placeholder="出版日期" style="width: 140px">
+        <input type="number" id="shichangjia" name="shichangjia" style="width: 65px;margin-right: 2px" placeholder="市场价">
+        <input type="number" id="vipjia" name="vipjia" style="width: 65px;margin-left: 2px" placeholder="会员价"><br>
+
+
+    </div>
+    <div id="contaiber2">
+        <input type="text" id="shuming" name="shuming" placeholder="书名">
+        <input type="text" id="zuozhe" name="zuozhe" placeholder="作者"><br>
+        <input type="text" id="chubanshe" name="chubanshe" placeholder="出版社">
+
+
+        <input type="text" id="banci" name="banci" placeholder="版次"><br>
+        <input type="text" id="yeshu" name="yeshu" placeholder="页数">
+        <input type="text" id="ISBN" name="ISBN" placeholder="ISBN"><br>
+        <label>*商品图片：</label>
+        <input type="file" id="file" name="file" style="border: none;width: 180px"><br><br>
+    </div>
+    <textarea type="text" id="shuoming" name="shuoming" style="width: 300px;height: 140px;" placeholder="书本介绍，不大于200字。"></textarea><br>
+    <input type="submit" name="submit" value="提交">
+</form>
+</body>
+</html>

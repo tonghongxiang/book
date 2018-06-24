@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆界面</title>
+    <style type="text/css">
+        #body1{
+
+        }
+        #div1{
+            padding-top:20px;
+            width: 460px;
+            height: 300px;
+            text-align: center;
+            margin: 0 auto;
+            border: 1px solid #aaaaaa;
+            border-radius: 7px;
+            background-color:#f7f6f3;
+
+        }
+        #div2{
+            padding-top: 15px;
+            margin: 0 auto;
+            width: 250px;
+            height: auto;
+            text-align: left;
+
+
+        }
+        #hp1{
+            padding-top: 30px;
+            color: #4e4e4e;
+        }
+
+        .inpt {
+            background-color: white;
+            padding: 2px;
+            width:240px ;
+            border: #aaaaaa solid 1px;
+            border-radius: 5px;
+        }
+        .btn1{
+            background-color: #ffffff;
+            width: 70px;
+            height: 30px;
+            border: #a2a2a2 solid 1px;
+            border-radius:6px;
+            margin-top: 15px;
+        }
+
+        .p1{
+            margin:10px 0 5px 0;
+            color: #4e4e4e;
+            text-size:20px;
+            text-decoration: blink ;
+            font-weight: bold;
+        }
+        .p2{
+            font-size: 12px;
+            color: #aaaaaa;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            text-decoration:none;
+        }
+    </style>
+</head>
+
+
+<body bgcolor="#f1efea">
+<form method="post" action="登陆.php">
+    <div align="center">
+        <h1 id="hp1">叮当用户登录</h1>
+    </div>
+    <div id="div1">
+        <div id="div2">
+            <table>
+                <tbody>
+                <tr>
+                    <p class="p1" align="left">Username</p>
+                    <input class="inpt" type="text" name="zhanghao">
+                </tr>
+                <tr>
+                    <td>
+                        <p class="p1" align="left">Password</p>
+                        <input class="inpt" type="text" name="mima">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="p2">
+                            <a href="syslog.html" class="p2">>>系统管理员登陆</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="btn1" type="submit" name="submit" value="登陆" onmouseout="this.style.backgroundColor='#ffffff'"
+                               onmouseover="this.style.backgroundColor='#eaeaea'">
+                        <button class="btn1"  value="注册" onmouseout="this.style.backgroundColor='#ffffff'"
+                                onmouseover="this.style.backgroundColor='#eaeaea'"><a href="注册界面.html" style="text-decoration:none;">注册</a></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>
+</body>
+</html>
